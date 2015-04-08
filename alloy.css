@@ -1,0 +1,80 @@
+/*csslint adjoining-classes: false, font-sizes: false, font-faces: false,
+	floats: false, ids: false, qualified-headings: false, unique-headings: false
+*/
+/*
+	#ABCBD3 #EAC419 #B0A26D #4F4A3E #7B975B #94A361 #282620 
+	#ABCBD3 #ffd100 #b8a766 #423c2d #96a858 #121009
+*/
+body {
+	background-color: #423c2d;
+	font-family: Raleway;
+	color: #121009;
+}
+
+#players, #board {
+	width: 95%;
+	margin: auto;
+}
+
+#players {
+	-webkit-columns: 15rem 4;
+	-moz-columns: 15rem 4;
+	columns: 20rem 4;
+}
+
+#board {
+	-webkit-columns: 10rem 5;
+	-moz-columns: 10rem 5;
+	columns: 10rem 5;
+}
+
+.player, .target {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+.player {
+	float: left;
+	width: 90%;
+	height: 5rem;
+	background-color: #b8a766;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.target {
+	float: left;
+	background-color: #96a858;
+	padding: .5rem;
+	margin: .5rem;
+	width: 90%;
+	border-radius: .5em;
+}
+
+.posvalue {
+	color: #121009;
+	background-color: #EAC419;
+	border: solid .3rem #EAC419;
+}
+
+.negvalue {
+	color: #EAC419;
+	background-color: #121009;
+	border: solid .3rem #121009;
+}
+
+.posvalue, .negvalue {
+	font-size: 2rem;
+	float: left;
+	border-radius: 50%;
+	height: 2rem;
+	width: 2rem;
+	text-align: center;
+	margin-right: .5rem;
+	line-height: 1.2rem;
+}
+
+.targettitle, .posvalue, .negvalue {
+	font-weight: 700;
+}

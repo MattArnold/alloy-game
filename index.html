@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Alloy Game</title>
+    <meta name="description" content="Alloy: A card game of bronze-age metallurgy.">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900'
+		rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+		rel="stylesheet">
+    <link rel="stylesheet" href="alloy.css">
+</head>
+<body data-version="0.1">
+<div id="wrap">
+	<div id="players" class="section">
+		<div id="player1" class="player">Player 1
+			<div class="hand zone"></div>
+			<div class="used zone"></div>
+		</div>
+		<div id="player2" class="player">Player 2
+			<div class="used zone"></div>
+		</div>
+		<div id="player3" class="player">Player 3
+			<div class="used zone"></div>
+		</div>
+		<div id="player4" class="player">Player 4
+			<div class="used zone"></div>
+		</div>
+	</div>
+	<div id="board" class="section">
+		<script id="boardtemplate" type="text/x-handlebars-template">
+		{{#each chosentiles}}
+		<div class="target">
+			<div class={{#if polarity}}posvalue{{else}}negvalue{{/if}}>
+				{{value}}
+			</div>
+			<span class="targettitle">
+				{{title}}
+			</span>
+			{{text}}
+			<div class="worker">
+			</div>
+		</div>
+		{{/each}}
+		</script>
+	</div>
+	<div id="supply" class="section">
+	</div>
+</div>
+<script type="text/Javascript" src="js/jquery-2.1.0.js"></script>
+<script type="text/Javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/lodash.js"></script>
+<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
+<script type="text/javascript" src="js/playcards.js"></script>
+<script type="text/javascript" src="js/rendergame.js"></script>
+<script type="text/javascript" src="js/cardcatalog.js"></script>
+<script type="text/javascript" src="js/tilecatalog.js"></script>
+</body>
+</html>
